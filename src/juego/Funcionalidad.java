@@ -5,16 +5,24 @@ import java.lang.Math;
 public class Funcionalidad {
 
     private int numeros[] = new int[18];
-    private String cartas[] = new String[18];
+    private String cartas[] = {
+        "224187228", "149125173", "210145188", "254200216",
+        "255223211", "255117109", "255244156", "133222119",
+        "180215162", 
+        "224187228", "149125173", "210145188", "254200216",
+        "255223211", "255117109", "255244156", "133222119",
+        "180215162"
+    };
 
-    public int[] getNumeros(){
+    public int[] getNumeros() {
         darValores();
         return this.numeros;
     }
-    public String[] getCartas(){
+
+    public String[] getCartas() {
         return this.cartas;
     }
-    
+
     private int numeroAzar() {
         int numeroTemporal = (int) (Math.random() * 18);
         return numeroTemporal;
@@ -51,7 +59,7 @@ public class Funcionalidad {
                 numeroTemporal = numeroAzar();
             }
             numeros[i] = numeroTemporal;
-            
+
         }
         numeros[numeros.length - 1] = 0;
     }
