@@ -1,4 +1,3 @@
-
 package juego;
 
 import java.awt.Color;
@@ -144,7 +143,10 @@ public class NormalMode extends javax.swing.JFrame {
           b1.setBackground(Color.yellow);  
         }*/
         Funcionalidad funcion = new Funcionalidad();
-        funcion.darValores();
+        int [] numeros = funcion.getNumeros();
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println(numeros[i]);
+        }
     }//GEN-LAST:event_b1ActionPerformed
 
     public static void main(String args[]) {
@@ -178,8 +180,7 @@ public class NormalMode extends javax.swing.JFrame {
             }
         });
     }
-    
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b1;
