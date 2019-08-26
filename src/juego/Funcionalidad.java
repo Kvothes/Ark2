@@ -55,12 +55,12 @@ public class Funcionalidad {
     private void darValores() {
         for (int i = 0; i < numeros.length; i++) {
             int numeroTemporal = numeroAzar();
-            while (detectarRepetido(numeroTemporal) && !todosPosibles()) {
+            while (detectarRepetido(numeroTemporal) && !todosPosibles()) {          
                 numeroTemporal = numeroAzar();
             }
             numeros[i] = numeroTemporal;
-
         }
         numeros[numeros.length - 1] = 0;
     }
+    
 }
