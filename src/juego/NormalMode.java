@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JButton;
 
+
 public class NormalMode extends javax.swing.JFrame {
 
     Funcionalidad funcion = new Funcionalidad();
@@ -21,8 +22,8 @@ public class NormalMode extends javax.swing.JFrame {
         cs = 0;
         s = 59;
         min = 1;
-        voltear=new Timer(1000,vol); 
-        s2=0;
+        voltear = new Timer(1000, vol);
+        s2 = 0;
         b1.setEnabled(false);
         b2.setEnabled(false);
         b3.setEnabled(false);
@@ -45,8 +46,8 @@ public class NormalMode extends javax.swing.JFrame {
     private int cs, s, min, s2;
 
     private Timer t;
-    private Timer voltear; 
-        private ActionListener acciones = new ActionListener() {
+    private Timer voltear;
+    private ActionListener acciones = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent ae) {
             cs++;
@@ -69,11 +70,17 @@ public class NormalMode extends javax.swing.JFrame {
         }
 
     };
-      
+
     private ActionListener vol = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent ae) {
-           s2++; 
+            s2++;
+            if (s2 == 2) {
+                voltear.stop();
+            } else {
+
+            }
+
         }
 
     };
@@ -82,8 +89,6 @@ public class NormalMode extends javax.swing.JFrame {
         String mostrar = (min < 10 ? "0" : "") + min + ":" + (s < 10 ? "0" : "") + s + ":" + (cs < 10 ? "0" : "") + cs;
         cronometro.setText(mostrar);
     }
-
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -302,10 +307,9 @@ public class NormalMode extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 int cont = 0;
     ArrayList<Color> a = new ArrayList<>();
-    ArrayList<Color> listacolores = new ArrayList<>();
-    ArrayList<JButton> botones=new ArrayList<>(); 
+    ArrayList<JButton> botones = new ArrayList<>();
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        
+
         Color c3 = new Color(Integer.parseInt(cartas[numeros[2]]));
         b3.setBackground(c3);
         this.deshabilitar(c3, b3);
@@ -314,7 +318,7 @@ int cont = 0;
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        
+
         Color c4 = new Color(Integer.parseInt(cartas[numeros[3]]));
         b4.setBackground(c4);
         this.deshabilitar(c4, b4);
@@ -323,7 +327,7 @@ int cont = 0;
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        
+
         Color c1 = new Color(Integer.parseInt(cartas[numeros[0]]));
         b1.setBackground(new Color(Integer.parseInt(cartas[numeros[0]])));
         this.colorvacio(c1, b1);
@@ -331,7 +335,7 @@ int cont = 0;
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
-        
+
         Color c2 = new Color(Integer.parseInt(cartas[numeros[1]]));
         b2.setBackground(c2);
         this.colorvacio(c2, b2);
@@ -339,7 +343,7 @@ int cont = 0;
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
-        
+
         Color c6 = new Color(Integer.parseInt(cartas[numeros[5]]));
         b6.setBackground(c6);
         this.deshabilitar(c6, b6);
@@ -348,7 +352,7 @@ int cont = 0;
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-        
+
         Color c7 = new Color(Integer.parseInt(cartas[numeros[6]]));
         b7.setBackground(c7);
         this.deshabilitar(c7, b7);
@@ -357,7 +361,7 @@ int cont = 0;
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        
+
         Color c8 = new Color(Integer.parseInt(cartas[numeros[7]]));
         b8.setBackground(c8);
         this.deshabilitar(c8, b8);
@@ -366,7 +370,7 @@ int cont = 0;
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
-        
+
         Color c9 = new Color(Integer.parseInt(cartas[numeros[8]]));
         b9.setBackground(c9);
         this.deshabilitar(c9, b9);
@@ -375,7 +379,7 @@ int cont = 0;
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
-        
+
         Color c10 = new Color(Integer.parseInt(cartas[numeros[9]]));
         b10.setBackground(c10);
         this.deshabilitar(c10, b10);
@@ -384,7 +388,7 @@ int cont = 0;
     }//GEN-LAST:event_b10ActionPerformed
 
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
-        
+
         Color c11 = new Color(Integer.parseInt(cartas[numeros[10]]));
         b11.setBackground(c11);
         this.deshabilitar(c11, b11);
@@ -393,16 +397,16 @@ int cont = 0;
     }//GEN-LAST:event_b11ActionPerformed
 
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
-        
+
         Color c12 = new Color(Integer.parseInt(cartas[numeros[11]]));
         b12.setBackground(c12);
         this.deshabilitar(c12, b12);
         this.colorvacio(c12, b12);
-    
+
     }//GEN-LAST:event_b12ActionPerformed
 
     private void b13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13ActionPerformed
-        
+
         Color c13 = new Color(Integer.parseInt(cartas[numeros[12]]));
         b13.setBackground(c13);
         this.deshabilitar(c13, b13);
@@ -411,16 +415,16 @@ int cont = 0;
     }//GEN-LAST:event_b13ActionPerformed
 
     private void b14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b14ActionPerformed
-        
+
         Color c14 = new Color(Integer.parseInt(cartas[numeros[13]]));
         b14.setBackground(c14);
         this.deshabilitar(c14, b14);
         this.colorvacio(c14, b14);
-      
+
     }//GEN-LAST:event_b14ActionPerformed
 
     private void b15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b15ActionPerformed
-        
+
         Color c15 = new Color(Integer.parseInt(cartas[numeros[14]]));
         b15.setBackground(c15);
         this.deshabilitar(c15, b15);
@@ -429,7 +433,7 @@ int cont = 0;
     }//GEN-LAST:event_b15ActionPerformed
 
     private void b16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16ActionPerformed
-        
+
         Color c16 = new Color(Integer.parseInt(cartas[numeros[15]]));
         b16.setBackground(c16);
         this.deshabilitar(c16, b16);
@@ -438,7 +442,7 @@ int cont = 0;
     }//GEN-LAST:event_b16ActionPerformed
 
     private void b17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b17ActionPerformed
-        
+
         Color c17 = new Color(Integer.parseInt(cartas[numeros[16]]));
         b17.setBackground(c17);
         this.deshabilitar(c17, b17);
@@ -447,7 +451,7 @@ int cont = 0;
     }//GEN-LAST:event_b17ActionPerformed
 
     private void b18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b18ActionPerformed
-        
+
         Color c18 = new Color(Integer.parseInt(cartas[numeros[17]]));
         b18.setBackground(c18);
         this.deshabilitar(c18, b18);
@@ -473,28 +477,32 @@ int cont = 0;
         xd.setEnabled(true);
     }
 
+    
+
+
     private void colorvacio(Color c, JButton hb) {
-      //  cont++;
-       // System.out.println(cont);
-       
-       
-            a.add(c);
-            botones.add(hb); 
-            if (a.size() == 2) {
+        //  cont++;
+        // System.out.println(cont);
 
-                if (a.get(0).equals(a.get(1))) {
+        a.add(c);
+        botones.add(hb);
+        if (a.size() == 2) {
 
-                } else {
-                    botones.get(0).setBackground(null);
-                    botones.get(1).setBackground(null);  
-                    this.habilitar(botones.get(0));
-                    this.habilitar(botones.get(1));
-                }
-                a.clear();
-                botones.clear();
+            if (a.get(0).equals(a.get(1))) {
+
+            } else {
+                voltear.start();
+
+                botones.get(0).setBackground(null);
+                botones.get(1).setBackground(null);
+                this.habilitar(botones.get(0));
+                this.habilitar(botones.get(1));
+
             }
-            
-  
+            a.clear();
+            botones.clear();
+        }
+
     }
 
 
@@ -525,7 +533,10 @@ int cont = 0;
 
     }//GEN-LAST:event_startActionPerformed
 
-    public static void main(String args[]) {
+    
+    public static void main(String args[]) throws InterruptedException  {
+        
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
